@@ -40,6 +40,9 @@ python3.12 -m venv .venv
 
 # 우클릭
 .venv/bin/python click_macro.py --interval 5 --button right
+
+# 300~310초 사이 랜덤 간격
+.venv/bin/python click_macro.py --interval 300 --interval-max 310
 ```
 
 ### 옵션
@@ -47,7 +50,8 @@ python3.12 -m venv .venv
 | 옵션 | 기본값 | 설명 |
 |------|-------|------|
 | `--x`, `--y` | 현재 커서 위치 | 클릭할 화면 좌표 |
-| `--interval` | `60.0` | 클릭 사이 대기 시간(초) |
+| `--interval` | `60.0` | 클릭 사이 대기 시간(초). `--interval-max`와 같이 쓰면 최소값 |
+| `--interval-max` | 없음 | 지정 시 `--interval` ~ `--interval-max` 사이 랜덤 간격 |
 | `--warmup` | `3.0` | 좌표 미지정 시 시작 전 대기 시간(초) |
 | `--button` | `left` | 마우스 버튼 (`left` / `right` / `middle`) |
 
