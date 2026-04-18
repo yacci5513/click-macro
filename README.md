@@ -43,6 +43,9 @@ python3.12 -m venv .venv
 
 # 300~310초 사이 랜덤 간격
 .venv/bin/python click_macro.py --interval 300 --interval-max 310
+
+# 매 회차마다 더블클릭
+.venv/bin/python click_macro.py --interval 30 --clicks 2
 ```
 
 ### 옵션
@@ -54,6 +57,8 @@ python3.12 -m venv .venv
 | `--interval-max` | 없음 | 지정 시 `--interval` ~ `--interval-max` 사이 랜덤 간격 |
 | `--warmup` | `3.0` | 좌표 미지정 시 시작 전 대기 시간(초) |
 | `--button` | `left` | 마우스 버튼 (`left` / `right` / `middle`) |
+| `--clicks` | `1` | 한 회차에 연속 클릭할 횟수 (2면 더블클릭) |
+| `--click-interval` | `0.1` | `--clicks`가 2 이상일 때 클릭 사이 간격(초) |
 
 ## 정지 방법
 
